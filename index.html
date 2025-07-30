@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing UCEVA</title>
+  </head>
+  <body class="font-sans bg-white text-gray-900 scroll-smooth">
+<header class="sticky top-0 z-50 bg-white shadow-md">
+  <nav class="flex items-center justify-between px-4 py-3">
+    <h1 class="text-lg font-bold">UCEVA Directo</h1>
+
+    <!-- Botón Hamburguesa (solo visible en mobile) -->
+    <button id="menu-toggle" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+    <!-- Menú -->
+    <ul
+      id="menu"
+      class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-white px-4 py-4 md:static md:flex md:flex-row md:gap-6 md:items-center md:w-auto md:bg-transparent"
+    >
+      <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+      <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+      <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="space-y-16 px-4 py-8">
+    <section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center">
+      <h2 class="text-3xl font-bold mb-4">Bienvenido/a</h2>
+      <p class="text-base max-w-md">Accede rápido a la información clave de la UCEVA. Todo en un solo lugar</p>
+      <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Conoce más</button>
+    </section>
+
+    <section id="servicios">
+      <h3 class="text-2xl font-semibold mb-4">Categorías Principales</h3>
+      <!-- Aquí van tarjetas o enlaces por categoría -->
+       <!-- 🔍 Buscador -->
+  <input
+    id="buscador"
+    type="text"
+    placeholder="Busca servicios como matrícula, bienestar..."
+    class="w-full p-3 border border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+
+  <!-- 📦 Contenedor de tarjetas -->
+  <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+  <!-- Tarjeta 1 -->
+  <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 transition-transform hover:scale-105">
+    <div class="text-blue-600 text-3xl">🎓</div>
+    <h4 class="text-lg font-bold">Matrícula</h4>
+    <p class="text-sm text-gray-600">Consulta fechas, requisitos y pasos para inscribirte.</p>
+    <a href="#" class="mt-auto text-sm text-blue-600 hover:underline">Ver más</a>
+  </div>
+
+  <!-- Tarjeta 2 -->
+  <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 transition-transform hover:scale-105">
+    <div class="text-blue-600 text-3xl">🌐</div>
+    <h4 class="text-lg font-bold">Idiomas</h4>
+    <p class="text-sm text-gray-600">Cursos, certificaciones y descuentos en el Departamento de Idiomas.</p>
+    <a href="#" class="mt-auto text-sm text-blue-600 hover:underline">Ver más</a>
+  </div>
+
+  <!-- Tarjeta 3 -->
+  <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 transition-transform hover:scale-105">
+    <div class="text-blue-600 text-3xl">💰</div>
+    <h4 class="text-lg font-bold">Becas</h4>
+    <p class="text-sm text-gray-600">Opciones de apoyo económico y cómo aplicar a ellas.</p>
+    <a href="#" class="mt-auto text-sm text-blue-600 hover:underline">Ver más</a>
+  </div>
+</div>
+
+    </section>
+
+    <section id="contacto">
+      <h3 class="text-2xl font-semibold mb-4">Déjanos contactarte</h3>
+      <!-- Información de contacto o formulario -->
+       <form action="" class="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3">
+        <label for="text">Ingresa tu nombre</label>
+        <input type="text" placeholder="Juan Jesus Jaramillo" class="p-2 border border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500">
+       </form>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm py-6 text-gray-500 border-t">
+    © 2025 UCEVA. Todos los derechos reservados.
+  </footer>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
