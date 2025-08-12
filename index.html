@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing UCEVA</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="src/images/logo_vertical_sm.png" type="image/x-icon">
+    <title>UCEVA - Contenido rápido</title>
   </head>
   <body class="font-sans bg-white text-gray-900 scroll-smooth">
 <header class="sticky top-0 z-50 bg-white shadow-md">
   <nav class="flex items-center justify-between px-4 py-3">
-    <h1 class="text-lg font-bold">UCEVA Directo</h1>
+    <a href="#"><img class="h-auto w-40"  src="src/images/imagotipo-uceva - Normal.png"/></a>
 
     <!-- Botón Hamburguesa (solo visible en mobile) -->
     <button id="menu-toggle" class="md:hidden text-2xl">
@@ -21,7 +23,7 @@
       class="hidden flex-col gap-3 absolute top-full left-0 w-full bg-white px-4 py-4 md:static md:flex md:flex-row md:gap-6 md:items-center md:w-auto md:bg-transparent"
     >
       <li><a href="#inicio" class="hover:underline">Inicio</a></li>
-      <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+      <li><a href="#servicios" class="hover:underline">Mapa interactivo</a></li>
       <li><a href="#contacto" class="hover:underline">Contacto</a></li>
     </ul>
   </nav>
@@ -29,50 +31,463 @@
 
 
   <main class="space-y-16 px-4 py-8">
-    <section id="inicio" class="min-h-screen flex flex-col justify-center items-center text-center">
-      <h2 class="text-3xl font-bold mb-4">Bienvenido/a</h2>
-      <p class="text-base max-w-md">Accede rápido a la información clave de la UCEVA. Todo en un solo lugar</p>
-      <button class="mt-6 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Conoce más</button>
+    <section id="inicio" class="flex flex-col justify-center items-center text-center w-full max-w-xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Busca el programa de tu interés</h2>
+      <input
+        id="buscador"
+        type="text"
+        placeholder="Ej. Derecho..."
+        class="w-full p-3 border border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-[#55d600]"
+      />
     </section>
 
+    <!-- NO ENCONTRADO -->
+    <div id="mensajeNoResultados" class="hidden text-center mt-5 px-4 font-bold">
+      <p class="text-gray-700 text-base sm:text-lg mb-3">Lo sentimos mucho, en el momento no encontramos lo que buscabas</p>
+      <img class="max-w-[200px] w-full mx-auto sm:max-w-xs" src="src/images/XOsX.gif" alt="No encontrado">
+    </div>
+
     <section id="servicios">
-      <h3 class="text-2xl font-semibold mb-4">Categorías Principales</h3>
-      <!-- Aquí van tarjetas o enlaces por categoría -->
-       <!-- 🔍 Buscador -->
-  <input
-    id="buscador"
-    type="text"
-    placeholder="Busca servicios como matrícula, bienestar..."
-    class="w-full p-3 border border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-  />
 
-  <!-- 📦 Contenedor de tarjetas -->
-  <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-  <!-- Tarjeta 1 -->
-  <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 transition-transform hover:scale-105">
-    <div class="text-blue-600 text-3xl">🎓</div>
-    <h4 class="text-lg font-bold">Matrícula</h4>
-    <p class="text-sm text-gray-600">Consulta fechas, requisitos y pasos para inscribirte.</p>
-    <a href="#" class="mt-auto text-sm text-blue-600 hover:underline">Ver más</a>
-  </div>
+      <div class="facultad">
+        <!-- Sección de Facultad Ingeniería -->
+        <h3 class="text-3xl font-bold text-[#55d600] p-4">Facultad de Ingeniería</h3>
+        <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mb-14">
+          
+          <!-- Tarjeta 1 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-code-alt text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Ingeniería de Sistemas</h4>
+              <p class="text-sm text-gray-600">Diseña, desarrolla y gestiona soluciones tecnológicas que transforman el mundo digital.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
 
-  <!-- Tarjeta 2 -->
-  <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 transition-transform hover:scale-105">
-    <div class="text-blue-600 text-3xl">🌐</div>
-    <h4 class="text-lg font-bold">Idiomas</h4>
-    <p class="text-sm text-gray-600">Cursos, certificaciones y descuentos en el Departamento de Idiomas.</p>
-    <a href="#" class="mt-auto text-sm text-blue-600 hover:underline">Ver más</a>
-  </div>
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-paw-print text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Ingeniería Agropecuaria</h4>
+              <p class="text-sm text-gray-600">Innova en la producción agrícola y pecuaria con técnicas sostenibles y modernas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
 
-  <!-- Tarjeta 3 -->
-  <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col gap-3 transition-transform hover:scale-105">
-    <div class="text-blue-600 text-3xl">💰</div>
-    <h4 class="text-lg font-bold">Becas</h4>
-    <p class="text-sm text-gray-600">Opciones de apoyo económico y cómo aplicar a ellas.</p>
-    <a href="#" class="mt-auto text-sm text-blue-600 hover:underline">Ver más</a>
-  </div>
-</div>
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-bolt text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Ingeniería Electrónica</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
 
+          <!-- Tarjeta 4 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-sapling text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Ingeniería Ambiental</h4>
+              <p class="text-sm text-gray-600">Protege y gestiona los recursos naturales con soluciones para un futuro sostenible.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 5 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-hard-hat text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Ingeniería Industrial</h4>
+              <p class="text-sm text-gray-600">Opciones de apoyo económico y cómo aplicar a ellas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 6 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-science text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Ingeniería Biomédica</h4>
+              <p class="text-sm text-gray-600">Opciones de apoyo económico y cómo aplicar a ellas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 7 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-buildings text-[#55d600] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Tecnología en Obras Civiles</h4>
+              <p class="text-sm text-gray-600">Opciones de apoyo económico y cómo aplicar a ellas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#55d600] hover:bg-[#55d600] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="facultad">
+        <!-- Sección de Facultad Ciencias jurídicas y Humanísticas-->
+        <h3 class="text-3xl font-bold text-[#d436b5] p-4">Facultad de Ciencias Jurídicas y Humanísticas</h3>
+        <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mb-14">
+
+          <!-- Tarjeta 1 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-megaphone text-[#d436b5] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Comunicación Transmedia</h4>
+              <p class="text-sm text-gray-600">Diseña, desarrolla y gestiona soluciones tecnológicas que transforman el mundo digital.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#d436b5] hover:bg-[#d436b5] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#d436b5] hover:bg-[#d436b5] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-law text-[#d436b5] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Derecho</h4>
+              <p class="text-sm text-gray-600">Innova en la producción agrícola y pecuaria con técnicas sostenibles y modernas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#d436b5] hover:bg-[#d436b5] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#d436b5] hover:bg-[#d436b5] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-psychology text-[#d436b5] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Psicología</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#d436b5] hover:bg-[#d436b5] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#d436b5] hover:bg-[#d436b5] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="facultad">
+        <!-- Sección de Facultad Ciencias Administrativas, Económicas y Contables-->
+        <h3 class="text-3xl font-bold text-[#F3780A] p-4">Facultad Ciencias Administrativas, Económicas y Contables</h3>
+        <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mb-14">
+
+          <!-- Tarjeta 1 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-enterprise text-[#F3780A] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Administración de Empresas</h4>
+              <p class="text-sm text-gray-600">Diseña, desarrolla y gestiona soluciones tecnológicas que transforman el mundo digital.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-pharmacy text-[#F3780A] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Administración de Servicios de Salud</h4>
+              <p class="text-sm text-gray-600">Innova en la producción agrícola y pecuaria con técnicas sostenibles y modernas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-bank text-[#F3780A] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Contaduría Pública</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-globe text-[#F3780A] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Comercio Internacional</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#F3780A] hover:bg-[#F3780A] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="facultad">
+        <!-- Sección de Facultad Ciencias de la Salud-->
+        <h3 class="text-3xl font-bold text-[#00a0ce] p-4">Facultad Ciencias de la Salud</h3>
+        <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mb-14">
+
+          <!-- Tarjeta 1 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-code-alt text-[#00a0ce] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Medicina</h4>
+              <p class="text-sm text-gray-600">Diseña, desarrolla y gestiona soluciones tecnológicas que transforman el mundo digital.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#00a0ce] hover:bg-[#00a0ce] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#00a0ce] hover:bg-[#00a0ce] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-medical-kit text-[#00a0ce] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Enfermería</h4>
+              <p class="text-sm text-gray-600">Innova en la producción agrícola y pecuaria con técnicas sostenibles y modernas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#00a0ce] hover:bg-[#00a0ce] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#00a0ce] hover:bg-[#00a0ce] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-checklist text-[#00a0ce] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Premédico</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#00a0ce] hover:bg-[#00a0ce] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#00a0ce] hover:bg-[#00a0ce] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="facultad">
+        <!-- Sección de Facultad Ciencias de la Educación-->
+        <h3 class="text-3xl font-bold text-[#5c18a3] p-4">Facultad Ciencias de la Educación</h3>
+        <div id="categorias" class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 mb-14">
+
+          <!-- Tarjeta 1 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-football-kick text-[#5c18a3] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Licenciatura en Educación Física, Recreación y Deporte</h4>
+              <p class="text-sm text-gray-600">Diseña, desarrolla y gestiona soluciones tecnológicas que transforman el mundo digital.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-face-child text-[#5c18a3] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Licenciatura en Educación Infantil</h4>
+              <p class="text-sm text-gray-600">Innova en la producción agrícola y pecuaria con técnicas sostenibles y modernas.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-translate text-[#5c18a3] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Licenciatura en Lenguas Extranjeras, con Énfasis en Inglés</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta 4 -->
+          <div class="tarjeta bg-white rounded-xl shadow-md p-6 flex flex-col justify-between h-full gap-3 transition-transform hover:scale-105">
+            <div>
+              <i class='bx bx-globe-stand text-[#5c18a3] text-4xl mr-2'></i>
+              <h4 class="text-lg font-bold">Licenciatura en Ciencias Sociales</h4>
+              <p class="text-sm text-gray-600">Crea y optimiza sistemas electrónicos que impulsan la industria y la tecnología.</p>
+            </div>
+            <div>
+              <a href="src/StudyPlans/MALLACURRICULAR_INGENIERIADESISTEMAS.pdf" download="PLAN-DE-ESTUDIOS-INGENIERIA-SISTEMAS.pdf"
+                class="block w-full sm:w-auto px-3 py-3 mt-3 font-semibold rounded-lg shadow text-center text-sm sm:text-base leading-tight text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Plan de estudios
+              </a>
+              <a href="#"
+                class="block w-full sm:w-auto px-4 py-3 mt-2 font-semibold rounded-lg shadow text-center text-sm sm:text-base text-[#5c18a3] hover:bg-[#5c18a3] hover:text-white transition">
+                Inscribirme
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      
     </section>
 
     <section id="contacto">
