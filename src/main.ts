@@ -50,6 +50,10 @@ const finder = document.getElementById("buscador") as HTMLInputElement | null;
 const titleH2 = document.querySelector('#inicio h2') as HTMLElement | null;
 
 if (header && finder) {
+  const safeFinder = finder;
+  const safeHeader = header;
+
+
   let isFixed = false;
   let headerHidden = false;
   let titleHidden = false;
@@ -58,9 +62,9 @@ if (header && finder) {
   const spacer = document.createElement("div");
 
   // Calculamos UNA SOLA VEZ la posición inicial
-  const finderRect = finder.getBoundingClientRect();
+  const finderRect = safeFinder.getBoundingClientRect();
   const finderInitialTop = finderRect.top + window.scrollY;
-  const headerHeight = header.offsetHeight;
+  const headerHeight = safeHeader.offsetHeight;
   const triggerPoint = finderInitialTop - (headerHeight + MARGIN);
 
   // Configuración inicial
@@ -77,28 +81,28 @@ if (header && finder) {
     if (isFixed) return;
 
     // Capturar posición exacta ANTES de cualquier cambio
-    const rect = finder.getBoundingClientRect();
+    const rect = safeFinder.getBoundingClientRect();
 
     // Crear spacer exacto
-    spacer.style.height = `${finder.offsetHeight}px`;
+    spacer.style.height = `${safeFinder.offsetHeight}px`;
     spacer.style.width = `${rect.width}px`;
     spacer.style.visibility = "hidden";
 
-    if (finder.parentElement) {
-      finder.parentElement.insertBefore(spacer, finder);
+    if (safeFinder.parentElement) {
+      safeFinder.parentElement.insertBefore(spacer, safeFinder);
     }
 
     // Cambiar a fixed SIN transición inicialmente
-    finder.style.transition = "none";
-    finder.style.position = "fixed";
-    finder.style.top = `${rect.top}px`;
-    finder.style.left = `${rect.left}px`;
-    finder.style.width = `${rect.width}px`;
+    safeFinder.style.transition = "none";
+    safeFinder.style.position = "fixed";
+    safeFinder.style.top = `${rect.top}px`;
+    safeFinder.style.left = `${rect.left}px`;
+    safeFinder.style.width = `${rect.width}px`;
 
     // Reactivar transición después de un frame
     requestAnimationFrame(() => {
-      finder.style.transition = "top 200ms ease-out";
-      finder.style.top = `${MARGIN}px`;
+      safeFinder.style.transition = "top 200ms ease-out";
+      safeFinder.style.top = `${MARGIN}px`;
     });
 
     isFixed = true;
@@ -113,15 +117,15 @@ if (header && finder) {
     }
 
     // Cambiar a sticky sin transición
-    finder.style.transition = "none";
-    finder.style.position = "sticky";
-    finder.style.top = `${headerHeight + MARGIN}px`;
-    finder.style.left = "";
-    finder.style.width = "";
+    safeFinder.style.transition = "none";
+    safeFinder.style.position = "sticky";
+    safeFinder.style.top = `${headerHeight + MARGIN}px`;
+    safeFinder.style.left = "";
+    safeFinder.style.width = "";
 
     // Reactivar transición
     requestAnimationFrame(() => {
-      finder.style.transition = "top 200ms ease-out";
+      safeFinder.style.transition = "top 200ms ease-out";
     });
 
     isFixed = false;
@@ -146,16 +150,16 @@ if (header && finder) {
   function toggleHeader(hide: boolean) {
     if (hide && !headerHidden) {
       // Ocultar header INMEDIATAMENTE, sin esperar
-      header.style.transition = "transform 150ms ease-out, opacity 150ms ease-out";
-      header.style.transform = "translateY(-100%)";
-      header.style.opacity = "0";
-      header.style.pointerEvents = "none";
+      safeHeader.style.transition = "transform 150ms ease-out, opacity 150ms ease-out";
+      safeHeader.style.transform = "translateY(-100%)";
+      safeHeader.style.opacity = "0";
+      safeHeader.style.pointerEvents = "none";
       headerHidden = true;
     } else if (!hide && headerHidden) {
       // Mostrar header
-      header.style.transform = "translateY(0)";
-      header.style.opacity = "1";
-      header.style.pointerEvents = "auto";
+      safeHeader.style.transform = "translateY(0)";
+      safeHeader.style.opacity = "1";
+      safeHeader.style.pointerEvents = "auto";
       headerHidden = false;
     }
   }
@@ -210,7 +214,7 @@ if (header && finder) {
     resizeTimeout = window.setTimeout(() => {
       if (isFixed && spacer.parentNode) {
         const spacerRect = spacer.getBoundingClientRect();
-        finder.style.width = `${spacerRect.width}px`;
+        safeFinder.style.width = `${spacerRect.width}px`;
       }
     }, 100);
   });
