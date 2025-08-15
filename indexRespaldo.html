@@ -1,0 +1,134 @@
+<body
+  class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+>
+  <!-- Header con toggle -->
+  <header class="bg-gray-100 dark:bg-gray-800 p-4">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Mi Proyecto</h1>
+
+      <!-- Toggle automático -->
+      <div id="toggle-container"></div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="max-w-4xl mx-auto p-6">
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
+      <h2 class="text-xl font-semibold mb-4">¡Dark Mode Funcionando!</h2>
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+        Este contenido cambia automáticamente entre modo claro y oscuro. La
+        preferencia se guarda en localStorage.
+      </p>
+
+      <!-- Botones de prueba -->
+      <div class="space-x-3 mb-4">
+        <!-- Botón toggle manual -->
+        <button
+          data-toggle="dark"
+          class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+        >
+          🌙 Toggle
+        </button>
+
+        <!-- Botón modo claro -->
+        <button
+          onclick="setDarkMode(false)"
+          class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded"
+        >
+          ☀️ Claro
+        </button>
+
+        <!-- Botón modo oscuro -->
+        <button
+          onclick="setDarkMode(true)"
+          class="px-4 py-2 bg-gray-700 hover:bg-gray-800 text-white rounded"
+        >
+          🌙 Oscuro
+        </button>
+      </div>
+
+      <!-- Indicador de estado -->
+      <div class="p-3 bg-white dark:bg-gray-700 rounded border">
+        <p class="text-sm">
+          Modo actual: <span id="current-mode" class="font-bold"></span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Más contenido para probar -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+        <h3 class="font-semibold mb-2">Card 1</h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Contenido de prueba para ver el contraste.
+        </p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+        <h3 class="font-semibold mb-2">Card 2</h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          Más contenido para verificar los colores.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Script de dark mode -->
+  <script>
+    // Implementación simple inline para prueba
+    function toggleDarkMode() {
+      const html = document.documentElement;
+
+      if (html.classList.contains("dark")) {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        html.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
+      updateStatus();
+    }
+
+    function setDarkMode(isDark) {
+      const html = document.documentElement;
+
+      if (isDark) {
+        html.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      }
+      updateStatus();
+    }
+
+    function updateStatus() {
+      const isDark = document.documentElement.classList.contains("dark");
+      const statusEl = document.getElementById("current-mode");
+      if (statusEl) {
+        statusEl.textContent = isDark ? "🌙 Oscuro" : "☀️ Claro";
+      }
+    }
+
+    // Inicializar
+    document.addEventListener("DOMContentLoaded", function () {
+      // Crear botón toggle automático
+      const container = document.getElementById("toggle-container");
+      const toggleBtn = document.createElement("button");
+      toggleBtn.innerHTML = "🌙 Toggle";
+      toggleBtn.className =
+        "px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded transition-colors";
+      toggleBtn.onclick = toggleDarkMode;
+      container.appendChild(toggleBtn);
+
+      // Agregar listeners a botones existentes
+      document.querySelectorAll('[data-toggle="dark"]').forEach((btn) => {
+        btn.addEventListener("click", toggleDarkMode);
+      });
+
+      // Actualizar estado inicial
+      updateStatus();
+
+      console.log("Dark Mode inicializado correctamente");
+    });
+  </script>
+</body>
