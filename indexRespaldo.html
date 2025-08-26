@@ -1,17 +1,14 @@
-<body
+<!-- <body
   class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
 >
-  <!-- Header con toggle -->
   <header class="bg-gray-100 dark:bg-gray-800 p-4">
     <div class="max-w-4xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Mi Proyecto</h1>
 
-      <!-- Toggle automático -->
       <div id="toggle-container"></div>
     </div>
   </header>
 
-  <!-- Contenido principal -->
   <main class="max-w-4xl mx-auto p-6">
     <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
       <h2 class="text-xl font-semibold mb-4">¡Dark Mode Funcionando!</h2>
@@ -20,9 +17,7 @@
         preferencia se guarda en localStorage.
       </p>
 
-      <!-- Botones de prueba -->
       <div class="space-x-3 mb-4">
-        <!-- Botón toggle manual -->
         <button
           data-toggle="dark"
           class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
@@ -30,7 +25,6 @@
           🌙 Toggle
         </button>
 
-        <!-- Botón modo claro -->
         <button
           onclick="setDarkMode(false)"
           class="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded"
@@ -38,24 +32,18 @@
           ☀️ Claro
         </button>
 
-        <!-- Botón modo oscuro -->
         <button
           onclick="setDarkMode(true)"
           class="px-4 py-2 bg-gray-700 hover:bg-gray-800 text-white rounded"
         >
           🌙 Oscuro
         </button>
-      </div>
-
-      <!-- Indicador de estado -->
       <div class="p-3 bg-white dark:bg-gray-700 rounded border">
         <p class="text-sm">
           Modo actual: <span id="current-mode" class="font-bold"></span>
         </p>
       </div>
     </div>
-
-    <!-- Más contenido para probar -->
     <div class="grid md:grid-cols-2 gap-6">
       <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
         <h3 class="font-semibold mb-2">Card 1</h3>
@@ -72,9 +60,7 @@
     </div>
   </main>
 
-  <!-- Script de dark mode -->
   <script>
-    // Implementación simple inline para prueba
     function toggleDarkMode() {
       const html = document.documentElement;
 
@@ -109,7 +95,7 @@
       }
     }
 
-    // Inicializar
+ 
     document.addEventListener("DOMContentLoaded", function () {
       // Crear botón toggle automático
       const container = document.getElementById("toggle-container");
@@ -120,15 +106,29 @@
       toggleBtn.onclick = toggleDarkMode;
       container.appendChild(toggleBtn);
 
-      // Agregar listeners a botones existentes
+ 
       document.querySelectorAll('[data-toggle="dark"]').forEach((btn) => {
         btn.addEventListener("click", toggleDarkMode);
       });
 
-      // Actualizar estado inicial
       updateStatus();
 
       console.log("Dark Mode inicializado correctamente");
     });
   </script>
+</body> -->
+
+<body
+  class="bg-gradient-to-b from-[#02338a] to-[#ade8f4] min-h-screen flex flex-col"
+>
+  <header class="p-4 bg-white shadow flex gap-4">
+    <a href="/" data-link>Inicio</a>
+    <a href="/inscripcion" data-link>Inscripción</a>
+    <a href="/mapa" data-link>Mapa</a>
+    <a href="/faq" data-link>FAQ</a>
+  </header>
+
+  <main id="app" class="flex-1 p-6"></main>
+
+  <script type="module" src="/src/main.ts"></script>
 </body>
