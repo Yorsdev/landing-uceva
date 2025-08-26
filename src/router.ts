@@ -2,7 +2,7 @@ import { initPageFeatures } from "./main.js";
 
 type Route = {
     path: string;
-    view: string; // nombre del archivo parcial
+    view: string;
 };
 
 const routes: Route[] = [
@@ -24,11 +24,11 @@ async function router() {
     const app = document.getElementById("app");
     if (app) {
         app.innerHTML = html;
-        initPageFeatures(); // 👈 Reinyectar lógica después de cargar partial
+        initPageFeatures();
     }
 }
 
-// Escuchar cambios en la navegación
+
 export function initRouter() {
     window.addEventListener("popstate", router);
 
@@ -40,5 +40,5 @@ export function initRouter() {
         }
     });
 
-    router(); // Render inicial
+    router();
 }
