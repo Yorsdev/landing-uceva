@@ -2,10 +2,10 @@
 module.exports = {
   content: [
     "./index.html",
-    "./partials/home.html",
-    "./partials/inscripcion.html",
-    "./partials/mapa.html",
-    "./partials/faq.html",
+    "./public/partials/home.html",
+    "./public/partials/inscripcion.html",
+    "./public/partials/mapa.html",
+    "./public/partials/faq.html",
     "./src/**/*.{js,ts,jsx,tsx,vue,html}"
   ],
   darkMode: "class",
