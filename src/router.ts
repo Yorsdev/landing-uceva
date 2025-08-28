@@ -19,7 +19,7 @@ export async function navigateTo(url: string) {
 
 async function router() {
     const potentialMatch = routes.find(r => r.path === location.pathname) || routes[0];
-    const html = await fetch(`partials/${potentialMatch.view}`).then(res => res.text());
+    const html = await fetch(`/partials/${potentialMatch.view}`).then(res => res.text());
 
     const app = document.getElementById("app");
     if (app) {
