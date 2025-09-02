@@ -1,6 +1,7 @@
 import './style.css';
 import './darkmode.js';
 import { initRouter } from './router.ts';
+import { initModales } from './helpers/modales.ts';
 
 
 function initFinder() {
@@ -229,10 +230,9 @@ function initHeader() {
 }
 
 export function initPageFeatures() {
+  initModales();
   initFinder();
   initMenu();
   initHeader();
 }
-
-
 initRouter();
