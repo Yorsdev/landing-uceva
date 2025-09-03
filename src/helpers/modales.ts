@@ -125,6 +125,35 @@ const programas: Record<string, Programa> = {
         imagen: "/images/medicina.webp",
         video: "https://www.youtube.com/watch?v=0gHQ4asqzGM&ab_channel=CentrodeConsultor%C3%ADayEducaci%C3%B3nContinuaJaverianaCali",
     },
+    fisica: {
+        titulo: "Licenciatura en Educación Física, Recreación y Deporte.",
+        descripcion:
+            "Puedes trabajar como profesor de educación física en colegios y universidades, director de escuelas deportivas, entrenador personal, coordinador de programas de recreación en entidades públicas o privadas, y gestor de eventos deportivos y de wellness corporativo.",
+        imagen: "/images/fisica.webp",
+        video: "https://www.youtube.com/watch?v=C1MotxK5rnY&ab_channel=DatoCurioso-Universidades",
+    },
+    infantil: {
+        titulo: "Licenciatura en Educación Infantil.",
+        descripcion:
+            "Puedes trabajar como docente en jardines infantiles y preescolares, director de instituciones de educación inicial, diseñador de material pedagógico y lúdico, investigador en desarrollo infantil, y creador de programas educativos para la primera infancia.",
+        imagen: "/images/infantil.webp",
+        video: "https://www.youtube.com/watch?v=PRkOA5knF74&ab_channel=UCEVACOL",
+    },
+    lenguas: {
+        titulo: "Licenciatura en Lenguas Extranjeras con Énfasis en Inglés.",
+        descripcion:
+            "Puedes trabajar como docente de inglés en instituciones educativas de todos los niveles, traductor o intérprete, gestor cultural en entidades gubernamentales o internacionales, editor o corrector de estilo para publicaciones, y asesor en empresas que requieran comunicación intercultural y bilingüe.",
+        imagen: "/images/idiomas.webp",
+        video: "https://www.youtube.com/watch?v=2QHQ6DXzznI&ab_channel=UCEVACOL",
+    },
+    sociales: {
+        titulo: "Licenciatura en Ciencias Sociales",
+        descripcion:
+            "Puedes trabajar como investigador social en ONGs o centros de estudio, analista de políticas públicas, docente en colegios y universidades, consultor en proyectos de desarrollo comunitario, y asesor en entidades gubernamentales enfocadas en cultura, educación o juventud.",
+        imagen: "/images/sociales.webp",
+        video: "https://www.youtube.com/watch?v=ldX2qg1i8wc&ab_channel=UCEVACOL",
+    },
+
 };
 
 // Helper: convierte cualquier URL de YouTube en embed + params correctos
