@@ -10,50 +10,120 @@ const programas: Record<string, Programa> = {
         titulo: "Ingeniería de Sistemas",
         descripcion:
             "Puedes trabajar como desarrollador de software, arquitecto de soluciones TI, administrador de bases de datos, analista de ciberseguridad, consultor en transformación digital, gerente de proyectos tecnológicos e investigador en inteligencia artificial.",
-        imagen: "/images/ing-sis.jpg",
+        imagen: "/images/ing-sis.webp",
         video: "https://www.youtube.com/watch?v=5h45UFt4OZY&ab_channel=UCEVACOL",
     },
     agropecuaria: {
         titulo: "Ingeniería Agropecuaria",
         descripcion:
             "Puedes trabajar gestionando proyectos agrícolas y ganaderos, como ingeniero de suelos y riegos, investigador en agrotecnología y sostenibilidad, consultor en producción de alimentos, y gerente de fincas y empresas del sector agropecuario.",
-        imagen: "/images/ing-agric.jpg",
+        imagen: "/images/ing-agric.webp",
         video: "https://www.youtube.com/watch?v=75y9Lgt9Ld8&ab_channel=UCEVACOL",
     },
     electronica: {
         titulo: "Ingeniería Electrónica",
         descripcion:
             "Tu trabajo puede estar en la innovación de dispositivos inteligentes, en la automatización de procesos industriales, en el diseño de sistemas de telecomunicaciones o en proyectos de energías renovables. Podrás trabajar en empresas de tecnología, en la industria automotriz, en robótica o en investigación científica. Estarás en el corazón de la revolución tecnológica que está transformando al mundo.",
-        imagen: "/images/ing-elec.jpg",
+        imagen: "/images/ing-elec.webp",
         video: "https://www.youtube.com/watch?v=buymwa4UdIM&ab_channel=UCEVACOL",
     },
     ambiental: {
         titulo: "Ingeniería Ambiental",
         descripcion:
             "Puedes trabajar como consultor en estudios de impacto ambiental, gestor de sistemas de tratamiento de agua y residuos, auditor ambiental en empresas e industrias, investigador en sostenibilidad, y planificador de proyectos de recuperación de ecosistemas.",
-        imagen: "/images/ing-amb.jpg",
-        video: "https://youtu.be/buymwa4UdIM?si=UNE9UOFOOVB39dOk",
+        imagen: "/images/ing-amb.webp",
+        video: "https://www.youtube.com/watch?v=JHmnI0jSoGk&ab_channel=UCEVACOL",
     },
     industrial: {
         titulo: "Ingeniería Industrial",
         descripcion:
             "Como Ingeniero Industrial puedes trabajar optimizando procesos productivos y logísticos en cualquier industria, gerente de operaciones, analista de calidad y productividad, consultor en mejora continua (Lean, Six Sigma), y planificador de cadenas de suministro.",
-        imagen: "/images/ing-indus.jpg",
+        imagen: "/images/ing-indus.webp",
         video: "https://www.youtube.com/watch?v=8FO1QPipT8Y&ab_channel=UCEVACOL",
     },
     biomedica: {
         titulo: "Ingeniería Biomédica",
         descripcion:
             "Puedes trabajar diseñando y manteniendo equipos médicos en hospitales, desarrollando prótesis y órganos artificiales, investigando en biotecnología, trabajando en control de calidad de dispositivos médicos y en la gestión de tecnología sanitaria.",
-        imagen: "/images/ing-biom.jpg",
+        imagen: "/images/ing-biom.webp",
         video: "https://www.youtube.com/watch?v=oxfb0oxyanE&ab_channel=UCEVACOL",
     },
-    viciles: {
+    civiles: {
         titulo: "Tecnología en Obras Civiles",
         descripcion:
             "Siendo Tecnólogo en Obras Civiles puedes trabajar como inspector, interventor o asistente de obra en construcción, topógrafo, dibujante CAD, auxiliar en el diseño de estructuras y vías, y supervisor de materiales y procesos constructivos.",
-        imagen: "/images/ing-elec.jpg",
-        video: "https://youtu.be/buymwa4UdIM?si=UNE9UOFOOVB39dOk",
+        imagen: "/images/obras-civiles.webp",
+        video: "https://www.youtube.com/watch?v=bY81qBxzJeA&ab_channel=BuscandoCarrera",
+    },
+    transmedia: {
+        titulo: "Comunicación Transmedia",
+        descripcion:
+            "Como Tecnólogo en Comunicación Transmedia puedes trabajar como creador de contenido para múltiples plataformas (redes sociales, web, TV), estratega de comunicación digital, community manager, productor multimedia, guionista, y director de proyectos narrativos interactivos y crossmedia.",
+        imagen: "/images/com-trans.webp",
+        video: "https://www.youtube.com/watch?v=xkBQzEkBXZ8&ab_channel=ComplotEscueladeCreatividad",
+    },
+    derecho: {
+        titulo: "Derecho",
+        descripcion:
+            "Puedes trabajar como abogado litigante en diversas áreas (penal, civil, laboral, etc.), juez, fiscal, notario, asesor jurídico en empresas privadas o entidades públicas, conciliador, y consultor en compliance y derecho corporativo.",
+        imagen: "/images/derecho.webp",
+        video: "https://www.youtube.com/watch?v=43hANWmDCes&ab_channel=EdgarReina2",
+    },
+    psicologia: {
+        titulo: "Psicología",
+        descripcion:
+            "Puedes trabajar como psicólogo clínico en consulta privada o instituciones de salud, psicólogo organizacional en departamentos de recursos humanos, investigador, orientador escolar y familiar, y intervencionista en comunidades y proyectos sociales.",
+        imagen: "/images/psicologia.webp",
+        video: "https://www.youtube.com/watch?v=HyRxnKPZXHU&ab_channel=UCEVACOL",
+    },
+    empresas: {
+        titulo: "Administración de Empresas",
+        descripcion:
+            "Puedes trabajar como gerente, director o jefe en áreas como finanzas, marketing, operaciones o recursos humanos en cualquier tipo de empresa, emprendedor con tu propio negocio, consultor empresarial, y analista de mercado.",
+        imagen: "/images/admin-empresas.webp",
+        video: "https://www.youtube.com/watch?v=ldJ8vvRKax8&ab_channel=GabiRandom",
+    },
+    adminsalud: {
+        titulo: "Administración de Servicios de Salud",
+        descripcion:
+            "Puedes trabajar como administrador o gerente de hospitales, clínicas y EPS, auditor de servicios de salud, gestor de calidad en instituciones médicas, y planificador de proyectos para optimizar la prestación de servicios de salud.",
+        imagen: "/images/servicios-salud.webp",
+        video: "https://www.youtube.com/watch?v=jM0wIMeErz4&ab_channel=UCEVACOL",
+    },
+    contaduria: {
+        titulo: "Contaduría Pública",
+        descripcion:
+            "Puedes trabajar como contador público en firmas de auditoría, controller financiero en empresas, revisor fiscal, auditor interno o externo, asesor tributario, y consultor independiente en normatividad contable y financiera.",
+        imagen: "/images/cont-publica.webp",
+        video: "https://www.youtube.com/watch?v=-b3TTPdzB-s&ab_channel=UCEVACOL",
+    },
+    comercio: {
+        titulo: "Comercio Internacional",
+        descripcion:
+            "Puedes trabajar como gestor de importaciones y exportaciones en empresas multinacionales, agente de aduanas, analista de mercados internacionales, consultor en logística y supply chain, y representante comercial en el ámbito global.",
+        imagen: "/images/comercio.webp",
+        video: "https://www.youtube.com/watch?v=URlQDhYTq6U&ab_channel=UCEVACOL",
+    },
+    medicina: {
+        titulo: "Medicina",
+        descripcion:
+            "Puedes trabajar como médico general en hospitales, clínicas o consultorios privados, médico investigador, salubrista público, médico ocupacional en empresas, y especializarte en una de las múltiples áreas de la medicina.",
+        imagen: "/images/medicina.webp",
+        video: "https://www.youtube.com/watch?v=Cj26b1CRTIg&pp=ygUScXVlIGVzIGxhIG1lZGljaW5h",
+    },
+    enfermeria: {
+        titulo: "Enfermería",
+        descripcion:
+            "Puedes trabajar como enfermero/a en hospitales y clínicas, coordinador de servicios de enfermería, cuidador domiciliario, investigador en salud pública, educador comunitario en prevención de enfermedades, y en enfermería ocupacional.",
+        imagen: "/images/enfermeria.webp",
+        video: "https://www.youtube.com/watch?v=NAuTQG_GMno&ab_channel=UCEVACOL",
+    },
+    premedico: {
+        titulo: "Curso Premédico",
+        descripcion:
+            "Puedes trabajar como médico general en hospitales, clínicas o consultorios privados, médico investigador, salubrista público, médico ocupacional en empresas, y especializarte en una de las múltiples áreas de la medicina.",
+        imagen: "/images/medicina.webp",
+        video: "https://www.youtube.com/watch?v=0gHQ4asqzGM&ab_channel=CentrodeConsultor%C3%ADayEducaci%C3%B3nContinuaJaverianaCali",
     },
 };
 
