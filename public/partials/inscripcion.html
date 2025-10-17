@@ -12,16 +12,18 @@
   </h3>
 </section>
 
-<section class="relative">
+<section
+  class="relative flex flex-col justify-center w-full max-w-7xl mx-auto px-4"
+>
   <!-- ANTES -->
-  <div class="max-w-7xl">
+  <div class="max-w-7xl mb-14">
     <div class="relative py-6">
       <span
         aria-hidden="true"
         class="absolute left-[calc(50%_-_50vw)] w-[100vw] top-1/2 -translate-y-1/2 h-12 bg-gradient-to-r from-[#55d600] dark:from-[#009ffb] to-transparent"
       ></span>
 
-      <h2 class="relative z-10 text-3xl font-bold text-white">
+      <h2 class="relative z-10 font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-3xl">
         Antes de comenzar la inscripción
       </h2>
     </div>
@@ -42,7 +44,7 @@
       <span class="bx bx-link animate-bounce"></span>
     </p>
     <p class="m-3 font-medium dark:text-[#009ffb]">Ten a la mano:</p>
-    <div class="section_1 grid grid-cols-2 gap-4">
+    <div class="section_1 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="izquierdaContent">
         <ul class="m-3 list-inside list-disc">
           <li class="[&::marker]:text-[#009ffb]">
@@ -78,148 +80,210 @@
         </ul>
       </div>
     </div>
-  </div>
-  <p class="m-3 mb-6 font-normal">
-    Verifica que los documentos estén actualizados, en formato digital y
-    legibles. Además, asegúrate de ingresar datos verídicos, ya que el sistema
-    valida la información directamente con las bases del ICFES.
-  </p>
-
-  <!-- DURANTE -->
-  <div class="max-w-7xl mx-auto">
-    <div class="relative py-6">
-      <span
-        aria-hidden="true"
-        class="absolute left-[calc(50%_-_50vw)] w-[100vw] top-1/2 -translate-y-1/2 h-12 bg-gradient-to-r from-[#5c18a3] dark:from-[#fff] to-transparent"
-      ></span>
-
-      <h2
-        class="relative z-10 text-3xl font-bold text-white dark:text-[#111827]"
-      >
-        Proceso de inscripción paso a paso
-      </h2>
-    </div>
     <p class="m-3 mb-6 font-normal">
-      El proceso de inscripción se realiza completamente en línea y consta de
-      varias etapas. Estos son los pasos que deberás seguir:
+      Verifica que los documentos estén actualizados, en formato digital y
+      legibles. Además, asegúrate de ingresar datos verídicos, ya que el sistema
+      valida la información directamente con las bases del ICFES.
     </p>
-  </div>
 
-  <div class="section_1 grid grid-cols-2 gap-4">
-    <div class="izquierdaContent">
-      <!-- PASO UNO -->
-      <div class="flex items-start gap-4 mb-3">
-        <span class="text-4xl font-bold text-[#55d600] dark:text-white">1</span>
-        <div>
-          <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
-            Preinscripción
-          </h3>
-          <ul class="list-disc list-inside">
-            <li>
-              Ingresa al formulario disponible en el sitio web institucional.
-            </li>
-            <li>Genera e imprime el desprendible de pago.</li>
-          </ul>
+    <!-- DURANTE -->
+    <div class="max-w-7xl mx-auto">
+      <div class="relative py-6">
+        <span
+          aria-hidden="true"
+          class="absolute left-[calc(50%_-_50vw)] w-[100vw] top-1/2 -translate-y-1/2 h-12 bg-gradient-to-r from-[#5c18a3] dark:from-[#fff] to-transparent"
+        ></span>
+
+        <h2
+          class="relative z-10 font-bold text-white dark:text-[#111827] text-xl sm:text-2xl md:text-3xl lg:text-3xl"
+        >
+          Proceso de inscripción paso a paso
+        </h2>
+      </div>
+      <p class="m-3 mb-6 font-normal">
+        El proceso de inscripción se realiza completamente en línea y consta de
+        varias etapas. Estos son los pasos que deberás seguir:
+      </p>
+    </div>
+
+    <div class="section_1 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="izquierdaContent">
+        <!-- PASO UNO -->
+        <div class="flex items-start gap-4 mb-3">
+          <span class="text-4xl font-bold text-[#55d600] dark:text-white"
+            >1</span
+          >
+          <div>
+            <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
+              Preinscripción
+            </h3>
+            <ul class="list-disc list-inside">
+              <li>
+                Ingresa al formulario disponible en el sitio web institucional.
+              </li>
+              <li>Genera e imprime el desprendible de pago.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- PASO DOS -->
+        <div class="flex items-start gap-4 mb-3">
+          <span class="text-4xl font-bold text-[#55d600] dark:text-white"
+            >2</span
+          >
+          <div>
+            <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
+              Pago de la Inscripción
+            </h3>
+            <ul class="list-disc list-inside">
+              <li>Realiza el pago en línea o en los puntos autorizados.</li>
+              <li>
+                Recibirás por correo electrónico un enlace único para continuar.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- PASO TERCERO -->
+        <div class="flex items-start gap-4 mb-3">
+          <span class="text-4xl font-bold text-[#55d600] dark:text-white"
+            >3</span
+          >
+          <div>
+            <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
+              Dilingenciamiento del formulario
+            </h3>
+            <ul class="list-disc list-inside">
+              <li>
+                Completa el formulario con tus datos personales y académicos.
+              </li>
+              <li>Ingresa los resultados del examen Saber 11 (ICFES).</li>
+              <li>El sistema validará automáticamente tu información.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- PASO CUARTO -->
+        <div class="flex items-start gap-4 mb-3">
+          <span class="text-4xl font-bold text-[#55d600] dark:text-white"
+            >4</span
+          >
+          <div>
+            <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
+              Validación y prueba psicotécnica
+            </h3>
+            <ul class="list-disc list-inside">
+              <li>
+                Si cumples los requisitos, recibirás la citación a la prueba
+                psicotécnica.
+              </li>
+              <li>
+                Preséntala en la fecha y hora asignadas, no se reprograma.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- PASO QUINTO -->
+        <div class="flex items-start gap-4 mb-3">
+          <span class="text-4xl font-bold text-[#55d600] dark:text-white"
+            >5</span
+          >
+          <div>
+            <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
+              Admisión y matrícula
+            </h3>
+            <ul class="list-disc list-inside">
+              <li>
+                Consulta los resultados de admisión publicados por la UCEVA.
+              </li>
+              <li>
+                Formaliza la matrícula académica y financiera en las fechas
+                establecidas.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <!-- PASO DOS -->
-      <div class="flex items-start gap-4 mb-3">
-        <span class="text-4xl font-bold text-[#55d600] dark:text-white">2</span>
-        <div>
-          <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
-            Pago de la Inscripción
-          </h3>
-          <ul class="list-disc list-inside">
-            <li>Realiza el pago en línea o en los puntos autorizados.</li>
-            <li>
-              Recibirás por correo electrónico un enlace único para continuar.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- PASO TERCERO -->
-      <div class="flex items-start gap-4 mb-3">
-        <span class="text-4xl font-bold text-[#55d600] dark:text-white">3</span>
-        <div>
-          <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
-            Dilingenciamiento del formulario
-          </h3>
-          <ul class="list-disc list-inside">
-            <li>
-              Completa el formulario con tus datos personales y académicos.
-            </li>
-            <li>Ingresa los resultados del examen Saber 11 (ICFES).</li>
-            <li>El sistema validará automáticamente tu información.</li>
-          </ul>
-        </div>
-      </div>
-      <!-- PASO CUARTO -->
-      <div class="flex items-start gap-4 mb-3">
-        <span class="text-4xl font-bold text-[#55d600] dark:text-white">4</span>
-        <div>
-          <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
-            Validación y prueba psicotécnica
-          </h3>
-          <ul class="list-disc list-inside">
-            <li>
-              Si cumples los requisitos, recibirás la citación a la prueba
-              psicotécnica.
-            </li>
-            <li>Preséntala en la fecha y hora asignadas, no se reprograma.</li>
-          </ul>
-        </div>
-      </div>
-      <!-- PASO QUINTO -->
-      <div class="flex items-start gap-4 mb-3">
-        <span class="text-4xl font-bold text-[#55d600] dark:text-white">5</span>
-        <div>
-          <h3 class="font-semibold text-lg text-gray-800 dark:text-[#55d600]">
-            Admisión y matrícula
-          </h3>
-          <ul class="list-disc list-inside">
-            <li>
-              Consulta los resultados de admisión publicados por la UCEVA.
-            </li>
-            <li>
-              Formaliza la matrícula académica y financiera en las fechas
-              establecidas.
-            </li>
-          </ul>
+
+      <div class="derechaContent">
+        <!-- VIDEO -->
+        <div
+          class="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-md"
+        >
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/EsdmHBRW96c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </div>
 
-    <div class="derechaContent">
-      <!-- VIDEO -->
-      <div
-        class="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-md"
+    <!-- DESPUES -->
+    <div class="max-w-7xl mx-auto">
+      <div class="relative py-6">
+        <span
+          aria-hidden="true"
+          class="absolute left-[calc(50%_-_50vw)] w-[100vw] top-1/2 -translate-y-1/2 h-12 bg-gradient-to-r from-[#67686b] dark:from-[#d436b5] to-transparent"
+        ></span>
+
+        <h2 class="relative z-10 font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-3xl">
+          Después de completar tu inscripción
+        </h2>
+      </div>
+      <p class="m-3">
+        Cuando termines el proceso de inscripción, revisa con frecuencia tu
+        correo electrónico, incluyendo la bandeja de spam.<span
+          class="dark:text-[#d436b5] font-bold"
+        >
+          Toda la comunicación oficial se envía por ese medio.</span
+        >
+      </p>
+      <p class="m-3">
+        Verifica que tus datos personales y académicos estén correctos. Si el
+        sistema detecta inconsistencias (por ejemplo, con el número SNP del
+        ICFES), la inscripción podría ser anulada.
+      </p>
+      <p class="m-3">
+        Guarda los comprobantes de pago, correos de confirmación y documentos
+        enviados; estos serán tu respaldo durante el proceso.
+      </p>
+      <p class="m-3">
+        Finalmente, consulta el
+        <a
+          href="https://www.uceva.edu.co/aspirante/calendario-de-inscripcion-admision-y-matricula-pregrados/"
+          class="dark:text-[#d436b5] transition duration-300 font-bold dark:hover:text-[#9900ff] hover:opacity-80"
+        target="_blank"
+        rel="noopener noreferrer""
+          >calendario académico</a
+        >
+        para conocer las fechas de publicación de resultados, matrícula y demás
+        actividades relacionadas con el inicio del semestre. Mantente atento a
+        las comunicaciones oficiales de la UCEVA, donde se publican las
+        novedades y pasos siguientes para los admitidos.
+      </p>
+      <h2 class="text-2xl text-center mt-20 mb-10 text-yellow-400 dark:text-[#d436b5] font-medium"
       >
-        <iframe
-          class="absolute top-0 left-0 w-full h-full"
-          src="https://www.youtube.com/embed/EsdmHBRW96c"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
+        ¿Qué pasa si eres admitido? <span class="bx bx-cool text-[#247ee6] dark:text-[#c9c9c9] animate-pulse text-lg"
+        >
+      </span>
+    </h2>
+    <p class="m-3 mb-7">Sólo hasta este momento es donde deberás presentar algunos documentos importantes. Pero tranquil@ <span class="text-[#55d600] font-medium">¡No te enredes!</span> Sólo necesitas esto:</p>
 
-  <!-- DESPUES -->
-  <div class="max-w-7xl mx-auto">
-    <div class="relative py-6">
-      <span
-        aria-hidden="true"
-        class="absolute left-[calc(50%_-_50vw)] w-[100vw] top-1/2 -translate-y-1/2 h-12 bg-gradient-to-r from-[#67686b] dark:from-[#d436b5] to-transparent"
-      ></span>
-
-      <h2 class="relative z-10 text-3xl font-bold text-white">Después</h2>
+    <ul class="m-3 list-inside list-disc">
+          <li class="[&::marker]:text-[#d436b5]">
+            Documento de identidad (Cédula, tarjeta de identidad o pasaporte) en formato PDF.
+          </li>
+          <li class="[&::marker]:text-[#d436b5]">
+            Diploma o acta de grado de bachiller en formato PDF.
+          </li>
+          <li class="[&::marker]:text-[#d436b5]">
+            Certificados de calificaciones de los grados 10° y 11° en formato PDF.
+          </li>
+          <li class="[&::marker]:text-[#d436b5]">
+            Comprobante del pago de la inscripción en formato PDF.
+          </li>
+        </ul>
     </div>
-    <p class="m-3">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eos
-      adipisci. Deleniti, magnam. Iure dicta atque numquam vitae ea quisquam
-      libero aperiam. Ut delectus modi veniam alias placeat expedita facilis.
-    </p>
   </div>
 </section>
