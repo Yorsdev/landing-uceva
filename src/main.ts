@@ -2,6 +2,7 @@ import './style.css';
 import './darkmode.js';
 import { initRouter } from './router.ts';
 import { initModales } from './helpers/modales.ts';
+import Fuse from 'fuse.js';
 
 
 function initFinder() {
@@ -229,10 +230,79 @@ function initHeader() {
   }
 }
 
+function initFAQSearch() {
+
+  // Datos de preguntas frecuentes
+  const faqs = [
+    {
+      question: "¿Cómo me inscribo en la universidad?",
+      answer: "Puedes realizar tu inscripción en línea a través del portal de admisiones de la UCEVA."
+    },
+    {
+      question: "¿Cuáles son los programas académicos disponibles?",
+      answer: "La UCEVA ofrece programas de pregrado, posgrado y educación continua. Puedes consultarlos en la sección 'Oferta Académica'."
+    },
+    {
+      question: "¿Dónde puedo consultar el calendario académico?",
+      answer: "El calendario académico se encuentra disponible en el sitio web institucional, en la sección 'Académico'."
+    },
+    {
+      question: "¿Qué es el SISBEN y para qué sirve?",
+      answer: "El SISBEN clasifica a la población según sus condiciones socioeconómicas para acceder a beneficios del Estado."
+    }
+  ];
+
+  //Configuración de Fuse.js
+  const fuse = new Fuse(faqs, {
+    keys: ['question'],
+    threshold: 0.4
+  });
+
+
+  //Selección de elementos del DOM
+  const searchInput = document.getElementById("faqSearch") as HTMLInputElement | null;
+  const resultsContainer = document.getElementById("faqResults") as HTMLElement | null;
+
+  if (!searchInput || !resultsContainer) {
+    console.warn("⚠️ Elementos FAQ no encontrados en el DOM.");
+    return;
+  }
+
+
+  // Escuchar cambios en el buscador
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.trim();
+    resultsContainer.innerHTML = "";
+
+    if (query.length === 0) return;
+
+    const results = fuse.search(query);
+    if (results.length === 0) {
+      resultsContainer.innerHTML = `<p class="text-gray-500 dark:text-gray-400">No encontré resultados para tu pregunta.</p>`;
+      return;
+    }
+
+    // Renderizar respuestas
+    results.forEach(({ item }) => {
+      const div = document.createElement("div");
+      div.className = "p-4 bg-white dark:bg-gray-800 rounded-lg shadow transition hover:shadow-lg";
+      div.innerHTML = `
+        <p class="font-semibold text-blue-600 dark:text-[#bbfd04] mb-1">${item.question}</p>
+        <p class="text-gray-700 dark:text-gray-300">${item.answer}</p>
+      `;
+      resultsContainer.appendChild(div);
+    });
+  });
+}
+// finaliza el código de chatbot
+
+// ================
+
 export function initPageFeatures() {
   initModales();
   initFinder();
   initMenu();
   initHeader();
+  initFAQSearch();
 }
 initRouter();
