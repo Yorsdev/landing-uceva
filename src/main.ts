@@ -235,20 +235,48 @@ function initFAQSearch() {
   // Datos de preguntas frecuentes
   const faqs = [
     {
-      question: "¿Cómo me inscribo en la universidad?",
-      answer: "Puedes realizar tu inscripción en línea a través del portal de admisiones de la UCEVA."
+      question: "¿Cómo me inscribo en la UCEVA?",
+      answer: "Puedes realizar tu inscripción a través del portal web de la UCEVA. Primero debes ingresar al menú “Aspirante → Inscripción”, diligenciar el formulario de preinscripción y pagar el valor correspondiente."
     },
     {
       question: "¿Cuáles son los programas académicos disponibles?",
-      answer: "La UCEVA ofrece programas de pregrado, posgrado y educación continua. Puedes consultarlos en la sección 'Oferta Académica'."
+      answer: `La UCEVA ofrece programas de pregrado, posgrado y educación continua. Puedes consultarlos en la sección 'Oferta Académica'. 
+      <a href="https://www.uceva.edu.co/inicio/atencion-y-servicio-al-ciudadano/oferta-academica-2/" target="_blank" class="text-[#f818ed] dark:text-[#bbfd04] 
+      font-semibold hover:underline hover:opacity-80 transition duration-300"> 👉 Consultar Oferta académica</a>`
     },
     {
       question: "¿Dónde puedo consultar el calendario académico?",
-      answer: "El calendario académico se encuentra disponible en el sitio web institucional, en la sección 'Académico'."
+      answer: `El calendario académico se encuentra disponible en el sitio web institucional, en la sección 'Calendario de Inscripción, admisión y matrícula'.
+      <a href="https://www.uceva.edu.co/aspirante/calendario-de-inscripcion-admision-y-matricula-pregrados/" target="_blank" class="text-[#f818ed] dark:text-[#bbfd04] 
+      font-semibold hover:underline hover:opacity-80 transition duration-300"> 👉 Consultar calendario académico</a>`
+    },
+    {
+      question: "¿Qué documentos necesito tener antes de comenzar la inscripción?",
+      answer: "Debes tener tu documento de identidad, diploma o acta de grado de bachiller, certificados de grados 10° y 11°, y el resultado del examen Saber 11 (o su equivalente) si aplica."
+    },
+    {
+      question: "¿Qué pasa si no presento la prueba psicotécnica cuando se requiere?",
+      answer: "Si la convocatoria indica que debes presentar una prueba psicotécnica y no lo haces en la fecha asignada, la inscripción puede quedar sin efecto o la calificación puede quedar en cero."
     },
     {
       question: "¿Qué es el SISBEN y para qué sirve?",
       answer: "El SISBEN clasifica a la población según sus condiciones socioeconómicas para acceder a beneficios del Estado."
+    },
+    {
+      question: "¿Dónde ingreso los resultados del examen Saber 11?",
+      answer: "Durante el formulario de inscripción se solicita el tipo de documento, número de documento y el Código SNP (si presentaste desde 2014 en adelante). Esa validación es necesaria para continuar con el proceso."
+    },
+    {
+      question: "¿Puedo inscribirme si soy aspirante extranjero?",
+      answer: "Sí, siempre y cuando cumplas con los requisitos académicos y de homologación de documentos que exige la universidad. (Nota: Detalles específicos de este caso pueden variar según normativa de la universidad)."
+    },
+    {
+      question: "¿Dónde pago la inscripción y cuál es el valor?",
+      answer: "El pago se realiza mediante el desprendible generado en la preinscripción (en línea o en los bancos autorizados). El valor exacto se encuentra publicado en la convocatoria vigente en la página de la universidad."
+    },
+    {
+      question: "¿Qué debo hacer después de ser admitido?",
+      answer: "Una vez admitido, debes formalizar la matrícula académica y financiera dentro de las fechas establecidas, entregar los documentos requeridos y estar atento a las indicaciones de la universidad sobre inicio de clases."
     }
   ];
 
