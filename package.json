@@ -16,6 +16,7 @@
     "vite": "^7.0.4"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.93.1",
     "fuse.js": "^7.1.0"
   }
 }

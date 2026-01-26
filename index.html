@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -14,7 +14,7 @@
       (function () {
         const theme = localStorage.getItem("theme");
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
+          "(prefers-color-scheme: dark)",
         ).matches;
 
         if (theme === "dark" || (!theme && prefersDark)) {
@@ -43,7 +43,11 @@
     <header
       id="headery"
       class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-800 transition-all duration-150 ease-out [will-change:transform,opacity]"
-      style="transition: transform 150ms ease-out, opacity 150ms ease-out"
+      style="
+        transition:
+          transform 150ms ease-out,
+          opacity 150ms ease-out;
+      "
     >
       <nav class="flex items-center justify-between px-4 py-3 lg:px-24">
         <a href="/">
@@ -101,9 +105,10 @@
       class="fixed bottom-0 left-0 w-full text-center text-sm sm:py-2 lg:py-3 text-gray-500 border-t bg-inherit z-50"
     >
       <p>
-        <span class="currentYear">®2025 UCEVA</span>. Developed with ❤ by
+        <span class="currentYear">®2026 UCEVA</span>. Developed with ❤ by
         YorsDev.
       </p>
+      <p class="counter">contador</p>
     </footer>
 
     <script type="module" src="/src/main.ts"></script>

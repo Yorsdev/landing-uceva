@@ -1,5 +1,6 @@
 import './style.css';
 import './darkmode.js';
+import { initializeCounter } from '../src/initializeCounter.ts'
 import { initRouter } from './router.ts';
 import { initModales } from './helpers/modales.ts';
 import Fuse from 'fuse.js';
@@ -326,11 +327,12 @@ function initFAQSearch() {
 
 // ================
 
-export function initPageFeatures() {
+export async function initPageFeatures() {
   initModales();
   initFinder();
   initMenu();
   initHeader();
   initFAQSearch();
+  await initializeCounter();
 }
 initRouter();
