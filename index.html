@@ -65,34 +65,130 @@
           />
         </a>
 
-        <!-- Botón Hamburguesa (solo visible en mobile) -->
-        <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+        <!-- <button
+          id="menu-toggle"
+          class="md:hidden text-2xl p-2 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+
         <ul
           id="menu"
-          class="dark:bg-gray-600 hidden flex-col gap-3 absolute top-full left-0 w-full bg-white px-4 py-4 md:static md:flex md:flex-row text-right md:gap-6 md:items-center md:w-auto md:bg-transparent md:dark:bg-transparent transition-colors"
+          class="hidden md:flex flex-col md:flex-row gap-3 md:gap-6 absolute md:static top-full left-0 w-full md:w-auto bg-white dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent px-4 py-4 md:p-0 shadow-lg md:shadow-none rounded-lg md:rounded-none md:items-center transition-all duration-300 ease-in-out"
         >
           <li>
-            <a href="/" data-link class="hover:underline">Inicio</a>
+            <a
+              href="/"
+              data-link
+              class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >Inicio</a
+            >
           </li>
           <li>
             <a
-              href="/images/MAPA-CAMPUS-UCEVA.jpg"
-              download="MAPA-INTERACTIVO-UCEVA-2025"
-              class="hover:underline"
+              href="/images/MAPA-UCEVA-NUEVO-WEB.webp"
+              download="CAMPUS-UCEVA"
+              class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >Mapa interactivo</a
             >
           </li>
           <li>
-            <a href="/inscripcion" data-link class="hover:underline"
+            <a
+              href="/inscripcion"
+              data-link
+              class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >Proceso de Inscripción</a
             >
           </li>
           <li>
-            <a href="/faq" data-link class="hover:underline">¿Dudas?</a>
+            <a
+              href="/faq"
+              data-link
+              class="block py-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >¿Dudas?</a
+            >
           </li>
-          <div id="toggle-container"></div>
+          <div id="toggle-container" class="mt-2 md:mt-0"></div>
         </ul>
-      </nav>
+      </nav> -->
+
+      <button 
+          id="menu-toggle" 
+          class="md:hidden flex flex-col gap-1.5 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200"
+          aria-label="Toggle menu"
+        >
+          <span class="menu-line w-6 h-0.5 bg-gray-900 dark:bg-white rounded transition-all duration-300"></span>
+          <span class="menu-line w-6 h-0.5 bg-gray-900 dark:bg-white rounded transition-all duration-300"></span>
+          <span class="menu-line w-6 h-0.5 bg-gray-900 dark:bg-white rounded transition-all duration-300"></span>
+        </button>
+
+        <!-- Menú Navegación -->
+        <nav
+  id="menu"
+  class="fixed right-0 top-0 md:static mt-20 md:mt-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm md:bg-transparent md:dark:bg-transparent transform translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out md:transition-none z-40 md:z-auto w-3/4 sm:w-80 md:w-auto"
+  role="navigation"
+>
+  <ul class="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8 p-6 md:p-0 h-screen md:h-auto md:justify-end md:space-x-6">
+    <!-- Inicio -->
+    <li class="w-full md:w-auto">
+      <a href="/" data-link
+         class="block text-lg md:text-base font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 relative md:inline-block md:px-2
+              after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5
+              after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+        Inicio
+      </a>
+    </li>
+
+    <!-- Mapa -->
+    <li class="w-full md:w-auto">
+      <a href="/images/MAPA-UCEVA-NUEVO-WEB.webp" download="CAMPUS-UCEVA"
+         class="block text-lg md:text-base font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 relative md:inline-block md:px-2
+              after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5
+              after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+        Mapa interactivo
+      </a>
+    </li>
+
+    <!-- Inscripción -->
+    <li class="w-full md:w-auto">
+      <a href="/inscripcion" data-link
+         class="block text-lg md:text-base font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 relative md:inline-block md:px-2
+              after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5
+              after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+        Proceso de Inscripción
+      </a>
+    </li>
+
+    <!-- FAQ -->
+    <li class="w-full md:w-auto">
+      <a href="/faq" data-link
+         class="block text-lg md:text-base font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 relative md:inline-block md:px-2
+              after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5
+              after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full">
+        ¿Dudas?
+      </a>
+    </li>
+
+    <li class="pt-4 md:pt-0 md:ml-2">
+      <div id="toggle-container" class="md:flex md:items-center"></div>
+    </li>
+  </ul>
+</nav>
+
+
     </header>
 
     <div id="whatsapp" class="sticky">
@@ -108,7 +204,7 @@
         <span class="currentYear">®2026 UCEVA</span>. Developed with ❤ by
         YorsDev.
       </p>
-      <p class="counter">contador</p>
+      <p class="counter">Cargando visitas...</p>
     </footer>
 
     <script type="module" src="/src/main.ts"></script>

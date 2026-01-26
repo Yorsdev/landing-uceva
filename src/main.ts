@@ -42,14 +42,163 @@ function initFinder() {
     mensajeNoResultados.style.display = hayResultados ? 'none' : 'block';
   });
 }
-function initMenu() {
-  const menuToggle = document.getElementById('menu-toggle')
-  const menu = document.getElementById('menu')
 
-  menuToggle?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden')
-  })
+// function initMenu() {
+//   const menuToggle = document.getElementById('menu-toggle') as HTMLButtonElement | null;
+//   const menu = document.getElementById('menu') as HTMLElement | null;
+
+//   if (menuToggle && menu) {
+//     // Estado inicial
+//     let isOpen = false;
+
+//     menuToggle.addEventListener("click", (e) => {
+//       e.stopPropagation();
+//       isOpen = !isOpen;
+//       menu.style.display = isOpen ? "flex" : "none";
+//     });
+
+//     // Cerrar menú al hacer clic en un link
+//     menu.querySelectorAll("a").forEach(link => {
+//       link.addEventListener("click", () => {
+//         isOpen = false;
+//         menu.style.display = "none";
+//       });
+//     });
+
+//     // Cerrar al hacer clic fuera
+//     document.addEventListener("click", (e) => {
+//       if (!menu.contains(e.target as Node) && !menuToggle.contains(e.target as Node)) {
+//         isOpen = false;
+//         menu.style.display = "none";
+//       }
+//     });
+//   }
+// }
+
+
+// function initMenu() {
+//   const menuToggle = document.getElementById('menu-toggle') as HTMLButtonElement | null;
+//   const menu = document.getElementById('menu') as HTMLElement | null;
+
+//   if (menuToggle && menu) {
+//     let isOpen = false;
+
+//     menuToggle.addEventListener("click", (e) => {
+//       e.stopPropagation();
+//       isOpen = !isOpen;
+
+//       // Animar menú
+//       if (isOpen) {
+//         menu.style.transform = "translateX(0)";
+//       } else {
+//         menu.style.transform = "translateX(-100%)";
+//       }
+
+//       // Animar icono hamburguesa
+//       const lines = menuToggle.querySelectorAll('.menu-line') as NodeListOf<HTMLElement>;
+//       if (isOpen) {
+//         lines[0].style.transform = "rotate(45deg) translateY(12px)";
+//         lines[1].style.opacity = "0";
+//         lines[2].style.transform = "rotate(-45deg) translateY(-12px)";
+//       } else {
+//         lines[0].style.transform = "rotate(0) translateY(0)";
+//         lines[1].style.opacity = "1";
+//         lines[2].style.transform = "rotate(0) translateY(0)";
+//       }
+//     });
+
+//     // Cerrar menú al hacer clic en un link
+//     menu.querySelectorAll("a").forEach(link => {
+//       link.addEventListener("click", () => {
+//         isOpen = false;
+//         menu.style.transform = "translateX(-100%)";
+
+//         const lines = menuToggle.querySelectorAll('.menu-line') as NodeListOf<HTMLElement>;
+//         lines[0].style.transform = "rotate(0) translateY(0)";
+//         lines[1].style.opacity = "1";
+//         lines[2].style.transform = "rotate(0) translateY(0)";
+//       });
+//     });
+
+//     // Cerrar al hacer clic fuera
+//     document.addEventListener("click", (e) => {
+//       if (!menu.contains(e.target as Node) && !menuToggle.contains(e.target as Node)) {
+//         if (isOpen) {
+//           isOpen = false;
+//           menu.style.transform = "translateX(-100%)";
+
+//           const lines = menuToggle.querySelectorAll('.menu-line') as NodeListOf<HTMLElement>;
+//           lines[0].style.transform = "rotate(0) translateY(0)";
+//           lines[1].style.opacity = "1";
+//           lines[2].style.transform = "rotate(0) translateY(0)";
+//         }
+//       }
+//     });
+//   }
+// }
+
+function initMenu() {
+  const menuToggle = document.getElementById('menu-toggle') as HTMLButtonElement | null;
+  const menu = document.getElementById('menu') as HTMLElement | null;
+
+  if (menuToggle && menu) {
+    let isOpen = false;
+
+    menuToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      isOpen = !isOpen;
+
+      // Animar menú (desde la derecha)
+      if (isOpen) {
+        menu.style.transform = "translateX(0)";
+      } else {
+        menu.style.transform = "translateX(100%)";
+      }
+
+      // Animar icono hamburguesa
+      const lines = menuToggle.querySelectorAll('.menu-line') as NodeListOf<HTMLElement>;
+      if (isOpen) {
+        lines[0].style.transform = "rotate(45deg) translateY(12px)";
+        lines[1].style.opacity = "0";
+        lines[2].style.transform = "rotate(-45deg) translateY(-12px)";
+      } else {
+        lines[0].style.transform = "rotate(0) translateY(0)";
+        lines[1].style.opacity = "1";
+        lines[2].style.transform = "rotate(0) translateY(0)";
+      }
+    });
+
+    // Cerrar menú al hacer clic en un link
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        isOpen = false;
+        menu.style.transform = "translateX(100%)";
+
+        const lines = menuToggle.querySelectorAll('.menu-line') as NodeListOf<HTMLElement>;
+        lines[0].style.transform = "rotate(0) translateY(0)";
+        lines[1].style.opacity = "1";
+        lines[2].style.transform = "rotate(0) translateY(0)";
+      });
+    });
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target as Node) && !menuToggle.contains(e.target as Node)) {
+        if (isOpen) {
+          isOpen = false;
+          menu.style.transform = "translateX(100%)";
+
+          const lines = menuToggle.querySelectorAll('.menu-line') as NodeListOf<HTMLElement>;
+          lines[0].style.transform = "rotate(0) translateY(0)";
+          lines[1].style.opacity = "1";
+          lines[2].style.transform = "rotate(0) translateY(0)";
+        }
+      }
+    });
+  }
 }
+
+
 function initHeader() {
 
   const header = document.getElementById("headery") as HTMLElement | null;
