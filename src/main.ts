@@ -300,7 +300,7 @@ function initFAQSearch() {
       answer: "Puedes realizar tu inscripción a través del portal web de la UCEVA. Primero debes ingresar al menú “Aspirante → Inscripción”, diligenciar el formulario de preinscripción y pagar el valor correspondiente."
     },
     {
-      question: "¿Cuáles son los programas académicos disponibles?",
+      question: "¿Cuáles son los programas académicos que se dictan?",
       answer: `La UCEVA ofrece programas de pregrado, posgrado y educación continua. Puedes consultarlos en la sección 'Oferta Académica'. 
       <a href="https://www.uceva.edu.co/inicio/atencion-y-servicio-al-ciudadano/oferta-academica-2/" target="_blank" class="text-[#f818ed] dark:text-[#bbfd04] 
       font-semibold hover:underline hover:opacity-80 transition duration-300"> 👉 Consultar Oferta académica</a>`
@@ -312,12 +312,12 @@ function initFAQSearch() {
       font-semibold hover:underline hover:opacity-80 transition duration-300"> 👉 Consultar calendario académico</a>`
     },
     {
-      question: "¿Qué documentos necesito tener antes de comenzar la inscripción?",
-      answer: "Debes tener tu documento de identidad, diploma o acta de grado de bachiller, certificados de grados 10° y 11°, y el resultado del examen Saber 11 (o su equivalente) si aplica."
+      question: "¿Qué documentos debo tener antes de comenzar la inscripción?",
+      answer: "Tu documento de identidad, diploma o acta de grado de bachiller, certificados de grados 10° y 11°, y el resultado del examen Saber 11 (o su equivalente) si aplica."
     },
     {
-      question: "¿Qué pasa si no presento la prueba psicotécnica cuando se requiere?",
-      answer: "Si la convocatoria indica que debes presentar una prueba psicotécnica y no lo haces en la fecha asignada, la inscripción puede quedar sin efecto o la calificación puede quedar en cero."
+      question: "¿Qué pasa si no asisto a la prueba psicotécnica?",
+      answer: "Si no te aistes en la fecha y hora asignada, el resultado de la prueba será cero."
     },
     {
       question: "¿Qué es el SISBEN y para qué sirve?",
@@ -325,19 +325,19 @@ function initFAQSearch() {
     },
     {
       question: "¿Dónde ingreso los resultados del examen Saber 11?",
-      answer: "Durante el formulario de inscripción se solicita el tipo de documento, número de documento y el Código SNP (si presentaste desde 2014 en adelante). Esa validación es necesaria para continuar con el proceso."
+      answer: "En el formulario de inscripción se solicita el tipo de documento, número de documento y el Código SNP (si presentaste desde 2014 en adelante). Esa validación es necesaria para continuar con el proceso."
     },
     {
       question: "¿Puedo inscribirme si soy aspirante extranjero?",
-      answer: "Sí, siempre y cuando cumplas con los requisitos académicos y de homologación de documentos que exige la universidad. (Nota: Detalles específicos de este caso pueden variar según normativa de la universidad)."
+      answer: "Sí, siempre y cuando cumplas con los requisitos académicos y de homologación de documentos que exige la Institución. (Nota: Detalles específicos de este caso pueden variar según normativa de la Institución)."
     },
     {
       question: "¿Dónde pago la inscripción y cuál es el valor?",
-      answer: "El pago se realiza mediante el desprendible generado en la preinscripción (en línea o en los bancos autorizados). El valor exacto se encuentra publicado en la convocatoria vigente en la página de la universidad."
+      answer: "El pago se realiza mediante el desprendible generado en la preinscripción (en línea o en los bancos autorizados). El valor exacto se encuentra publicado en la convocatoria vigente en la página de la Institución."
     },
     {
       question: "¿Qué debo hacer después de ser admitido?",
-      answer: "Una vez admitido, debes formalizar la matrícula académica y financiera dentro de las fechas establecidas, entregar los documentos requeridos y estar atento a las indicaciones de la universidad sobre inicio de clases."
+      answer: "Debes formalizar la matrícula académica y financiera dentro de las fechas establecidas, subir a la plataforma los documentos requeridos y estar atento a las indicaciones de la Institución sobre inicio de clases."
     }
   ];
 

@@ -18,7 +18,7 @@ const programas: Record<string, Programa> = {
         descripcion:
             "Puedes trabajar gestionando proyectos agrícolas y ganaderos, como ingeniero de suelos y riegos, investigador en agrotecnología y sostenibilidad, consultor en producción de alimentos, y gerente de fincas y empresas del sector agropecuario.",
         imagen: "/images/ing-agric.webp",
-        video: "https://www.youtube.com/watch?v=75y9Lgt9Ld8&ab_channel=UCEVACOL",
+        video: "https://www.youtube.com/watch?v=75y9Lgt9Ld8",
     },
     electronica: {
         titulo: "Ingeniería Electrónica",
@@ -32,7 +32,7 @@ const programas: Record<string, Programa> = {
         descripcion:
             "Puedes trabajar como consultor en estudios de impacto ambiental, gestor de sistemas de tratamiento de agua y residuos, auditor ambiental en empresas e industrias, investigador en sostenibilidad, y planificador de proyectos de recuperación de ecosistemas.",
         imagen: "/images/ing-amb.webp",
-        video: "https://www.youtube.com/watch?v=JHmnI0jSoGk&ab_channel=UCEVACOL",
+        video: "https://www.youtube.com/watch?v=JHmnI0jSoGk",
     },
     industrial: {
         titulo: "Ingeniería Industrial",
@@ -54,6 +54,13 @@ const programas: Record<string, Programa> = {
             "Siendo Tecnólogo en Obras Civiles puedes trabajar como inspector, interventor o asistente de obra en construcción, topógrafo, dibujante CAD, auxiliar en el diseño de estructuras y vías, y supervisor de materiales y procesos constructivos.",
         imagen: "/images/obras-civiles.webp",
         video: "https://www.youtube.com/watch?v=bY81qBxzJeA&ab_channel=BuscandoCarrera",
+    },
+    abastecimiento: {
+        titulo: "Tecnología en Abastecimiento y Logística",
+        descripcion:
+            "Siendo Tecnólogo en Abastecimiento y Logística puedes trabajar como analista de compras, coordinador de abastecimiento, supervisor de almacén, planificador de logística, y asistente en gestión de proveedores.",
+        imagen: "/images/abastecimiento-logistica.webp",
+        video: "https://www.youtube.com/shorts/JuV8B7ZTr_A",
     },
     transmedia: {
         titulo: "Comunicación Transmedia",
@@ -118,10 +125,17 @@ const programas: Record<string, Programa> = {
         imagen: "/images/enfermeria.webp",
         video: "https://www.youtube.com/watch?v=NAuTQG_GMno&ab_channel=UCEVACOL",
     },
+    regenciaFarmacia: {
+        titulo: "Regencia en Farmacia",
+        descripcion:
+            "Como Tecnólogo en Regencia de Farmacia de la UCEVA podrás dirigir servicios farmacéuticos de baja complejidad y establecimientos autorizados por la ley. Supervisas el correcto manejo y dispensación de medicamentos, garantizando el cumplimiento de la normatividad. Además, participas en proyectos de mejora e investigación aplicada, siempre priorizando el cuidado de la vida y la ética profesional.",
+        imagen: "/images/regencia-farmacia.webp",
+        video: "https://www.youtube.com/watch?v=3t1UXQC1PGo",
+    },
     premedico: {
         titulo: "Curso Premédico",
         descripcion:
-            "Puedes trabajar como médico general en hospitales, clínicas o consultorios privados, médico investigador, salubrista público, médico ocupacional en empresas, y especializarte en una de las múltiples áreas de la medicina.",
+            "El Premédico de la UCEVA es tu puerta de entrada a Medicina. Aquí fortaleces tus bases en ciencias, Bioestructura, Anatomía y Terminología Médica, desarrollas las habilidades y el nivel académico que exige la carrera, si obtienes uno de los 15 mejores promedios, podrás acceder directamente a un cupo en Medicina.",
         imagen: "/images/medicina.webp",
         video: "https://www.youtube.com/watch?v=0gHQ4asqzGM&ab_channel=CentrodeConsultor%C3%ADayEducaci%C3%B3nContinuaJaverianaCali",
     },
@@ -151,7 +165,7 @@ const programas: Record<string, Programa> = {
         descripcion:
             "Puedes trabajar como investigador social en ONGs o centros de estudio, analista de políticas públicas, docente en colegios y universidades, consultor en proyectos de desarrollo comunitario, y asesor en entidades gubernamentales enfocadas en cultura, educación o juventud.",
         imagen: "/images/sociales.webp",
-        video: "https://www.youtube.com/watch?v=ldX2qg1i8wc&ab_channel=UCEVACOL",
+        video: "https://www.youtube.com/watch?v=fsmeIU3P_EA&list=PLUvSAMnpECJThXm2eaecAeM8e-2BHMEMO&index=35",
     },
 
 };
