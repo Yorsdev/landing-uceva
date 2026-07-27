@@ -12,7 +12,7 @@ function initFinder() {
   const mensajeNoResultados = document.getElementById('mensajeNoResultados') as HTMLElement;
 
   buscador?.addEventListener('input', () => {
-    const texto = buscador.value.toLowerCase();
+    const texto = buscador.value.trim().toLowerCase();
     let hayResultados = false;
 
     facultades.forEach(facultad => {
@@ -21,23 +21,21 @@ function initFinder() {
 
       tarjetas.forEach(tarjeta => {
         const contenido = tarjeta.textContent?.toLowerCase() || '';
-        if (contenido.includes(texto)) {
-          (tarjeta as HTMLElement).style.display = 'block';
+        const coincide = texto === '' || contenido.includes(texto);
+
+        (tarjeta as HTMLElement).style.display = coincide ? '' : 'none';
+
+        if (coincide) {
           algunaCoincide = true;
-        } else {
-          (tarjeta as HTMLElement).style.display = 'none';
         }
       });
 
-
-      (facultad as HTMLElement).style.display = algunaCoincide ? 'block' : 'none';
-
+      (facultad as HTMLElement).style.display = algunaCoincide ? '' : 'none';
 
       if (algunaCoincide) {
         hayResultados = true;
       }
     });
-
 
     mensajeNoResultados.style.display = hayResultados ? 'none' : 'block';
   });

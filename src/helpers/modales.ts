@@ -12,6 +12,12 @@ const programas: Record<string, Programa> = {
             "Puedes trabajar como desarrollador de software, arquitecto de soluciones TI, administrador de bases de datos, analista de ciberseguridad, consultor en transformación digital, gerente de proyectos tecnológicos e investigador en inteligencia artificial.",
         imagen: "/images/ing-sis.webp",
         video: "https://www.youtube.com/watch?v=5h45UFt4OZY&ab_channel=UCEVACOL",
+    }, energias: {
+        titulo: "Ingeniería en Energías",
+        descripcion:
+            "Puedes trabajar en el diseño, gestión y optimización de sistemas de generación de energía (convencional y renovable), eficiencia energética, consultoría y regulación.",
+        imagen: "/images/ing-energ.webp",
+        video: "https://www.youtube.com/shorts/Ir54VKd6Krs",
     },
     agropecuaria: {
         titulo: "Ingeniería Agropecuaria",
