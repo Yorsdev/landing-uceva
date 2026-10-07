@@ -3,9 +3,21 @@ import { createClient } from "@supabase/supabase-js";
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_KEY;
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+let warnedAboutMissingSupabaseConfig = false;
 
 export async function initializeCounter() {
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    if (!warnedAboutMissingSupabaseConfig) {
+      console.warn(
+        "El contador de visitas está desactivado. Configura VITE_SUPABASE_URL y VITE_SUPABASE_KEY en .env.local."
+      );
+      warnedAboutMissingSupabaseConfig = true;
+    }
+    return;
+  }
+
+  const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
   try {
     // Insertar nueva visita
     await supabase.from("visits").insert([{ page: "/" }]);

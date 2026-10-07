@@ -173,6 +173,13 @@ const programas: Record<string, Programa> = {
         imagen: "/images/sociales.webp",
         video: "https://www.youtube.com/watch?v=fsmeIU3P_EA&list=PLUvSAMnpECJThXm2eaecAeM8e-2BHMEMO&index=35",
     },
+    musica: {
+        titulo: "Música",
+        descripcion:
+            "Puedes trabajar como intérprete o compositor, director de orquesta o coro, productor musical, docente en escuelas de música, gestor cultural en instituciones artísticas, y asesor en proyectos de educación musical y desarrollo cultural.",
+        imagen: "/images/musica-banner.webp",
+        video: "https://youtu.be/RyN8KxK1OzQ?si=5WRTLACaNCyVmKkl",
+    }
 
 };
 

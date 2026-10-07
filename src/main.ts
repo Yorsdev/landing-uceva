@@ -5,6 +5,9 @@ import { initRouter } from './router.ts';
 import { initModales } from './helpers/modales.ts';
 import Fuse from 'fuse.js';
 
+function normalizarTexto(texto: string): string {
+  return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
 
 function initFinder() {
   const buscador = document.getElementById('buscador') as HTMLInputElement;
@@ -12,7 +15,7 @@ function initFinder() {
   const mensajeNoResultados = document.getElementById('mensajeNoResultados') as HTMLElement;
 
   buscador?.addEventListener('input', () => {
-    const texto = buscador.value.trim().toLowerCase();
+    const texto = normalizarTexto(buscador.value.trim());
     let hayResultados = false;
 
     facultades.forEach(facultad => {
@@ -20,7 +23,7 @@ function initFinder() {
       let algunaCoincide = false;
 
       tarjetas.forEach(tarjeta => {
-        const contenido = tarjeta.textContent?.toLowerCase() || '';
+        const contenido = normalizarTexto(tarjeta.textContent || '');
         const coincide = texto === '' || contenido.includes(texto);
 
         (tarjeta as HTMLElement).style.display = coincide ? '' : 'none';
