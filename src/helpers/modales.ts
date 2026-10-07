@@ -212,12 +212,14 @@ function crearModal(id: string) {
     const modalRoot = document.getElementById("modal-root");
     if (!modalRoot) return;
 
+    //     bg-opacity-50 z-50
+    //  bg-black
     const youtubeEmbed = toYouTubeEmbed(data.video) ?? "";
 
     modalRoot.innerHTML = `
-    <div id="overlay" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div id="modal-box" class="bg-gray-700 p-6 rounded-lg w-[90%] max-w-3xl h-[90%] relative overflow-y-auto">
-        <button id="close-modal" class="absolute top-2 right-2 text-gray-300 hover:text-white text-xl">✖</button>
+    <div id="overlay" class="fixed inset-0 flex items-center justify-center backdrop-blur-md z-50 mx-3">
+      <div id="modal-box" class="bg-gray-700 p-6 rounded-lg w-[100%] max-w-3xl h-[80%] relative overflow-y-auto mb-8">
+        <button id="close-modal" class="absolute top-2 right-2 text-gray-300 hover:text-white text-xl">X</button>
 
         <img src="${data.imagen}" alt="${data.titulo}"
              class="mb-4 rounded-lg w-full h-auto object-cover" loading="lazy" />
